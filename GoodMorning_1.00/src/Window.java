@@ -16,9 +16,12 @@ public class Window extends JFrame{
         this.setLayout(new BorderLayout());
 
         // panelsのセットアップ
-        
+        panels.add(new BreakfastPanel()); 
+        panels.add(new FastGoSleepPanel());
+        panels.add(new FastWakeUpPanel());       
 
         // 以下Panelを張る。 panels を使う。
+        this.add(panels.get(1));
         
 
         this.setVisible(true);

@@ -1,7 +1,7 @@
-import javax.swing.JFrame;
+import javax.swing.*;;
 
 
 //朝ごはん用の画面。
-public class BreakfastPanel extends JFrame{
+public class BreakfastPanel extends JPanel{
     
 }
