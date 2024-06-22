@@ -21,7 +21,7 @@ public class Window extends JFrame{
         panels.add(new FastWakeUpPanel());       
 
         // 以下Panelを張る。 panels を使う。
-        this.add(panels.get(1));
+        this.add(panels.get(FastGoSleepPanel.PANEL_INDEX));
         
 
         this.setVisible(true);
