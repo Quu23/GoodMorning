@@ -18,10 +18,14 @@ public class Window extends JFrame{
         // panelsのセットアップ
         panels.add(new BreakfastPanel()); 
         panels.add(new FastGoSleepPanel());
-        panels.add(new FastWakeUpPanel());       
+        panels.add(new FastWakeUpPanel());
+        panels.add(new UserPanel());   
+        panels.add(new SidebarPanel());    
 
         // 以下Panelを張る。 panels を使う。
-        this.add(panels.get(FastGoSleepPanel.PANEL_INDEX));
+        // this.add(panels.get(FastGoSleepPanel.PANEL_INDEX),BorderLayout.CENTER);
+        this.add(panels.get(UserPanel.PANEL_INDEX),BorderLayout.EAST);
+        this.add(panels.get(SidebarPanel.PANEL_INDEX),BorderLayout.WEST);
         
 
         this.setVisible(true);
