@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.BorderLayout;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +25,26 @@ public class Window extends JFrame{
         // 以下Panelを張る。 panels を使う。
         this.add(panels.get(FastGoSleepPanel.PANEL_INDEX));
         
-
+        this.addKeyListener(new KeyListener() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+              switch (e.getKeyCode()) {
+                case KeyEvent.VK_A:
+                    App.mode--;
+                    break;
+                case KeyEvent.VK_D:
+                    App.mode++;
+                    break;
+                default:
+                    break;
+              }  
+              App.mode%=3;
+            }
+            @Override
+            public void keyReleased(KeyEvent e) {}
+            @Override
+            public void keyTyped(KeyEvent e) {}
+        });
         this.setVisible(true);
     }
 }
