@@ -28,27 +28,6 @@ public class Window extends JFrame{
         // this.add(panels.get(FastGoSleepPanel.PANEL_INDEX),BorderLayout.CENTER);
         this.add(panels.get(UserPanel.PANEL_INDEX),BorderLayout.EAST);
         this.add(panels.get(SidebarPanel.PANEL_INDEX),BorderLayout.WEST);
-        
-        this.addKeyListener(new KeyListener() {
-            @Override
-            public void keyPressed(KeyEvent e) {
-              switch (e.getKeyCode()) {
-                case KeyEvent.VK_A:
-                    App.mode--;
-                    break;
-                case KeyEvent.VK_D:
-                    App.mode++;
-                    break;
-                default:
-                    break;
-              }  
-              App.mode%=3;
-            }
-            @Override
-            public void keyReleased(KeyEvent e) {}
-            @Override
-            public void keyTyped(KeyEvent e) {}
-        });
         this.setVisible(true);
     }
 }
