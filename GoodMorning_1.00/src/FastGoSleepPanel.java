@@ -12,11 +12,6 @@ public class FastGoSleepPanel extends Panel{
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(PANEL_INDEX,this.getBackground());
-    }
-
-    @Override
     public int getPanelIndex() {
         return FastGoSleepPanel.PANEL_INDEX;
     }

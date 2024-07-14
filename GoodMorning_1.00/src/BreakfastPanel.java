@@ -11,11 +11,6 @@ public class BreakfastPanel extends Panel{
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(PANEL_INDEX,this.getBackground());
-    }
-
-    @Override
     public int getPanelIndex() {
         return BreakfastPanel.PANEL_INDEX;
     }

@@ -9,6 +9,7 @@ public class SidebarPanel extends Panel{
     
     SidebarPanel(){
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        
         JButton fastWakeUp = new JButton("早起き");
         fastWakeUp.addActionListener(new ActionListener() {
             @Override

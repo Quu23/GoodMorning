@@ -10,11 +10,6 @@ public class FastWakeUpPanel extends Panel{
     FastWakeUpPanel(){
         this.setBackground(Color.ORANGE);
     }
-    
-    @Override
-    public int hashCode() {
-        return Objects.hash(PANEL_INDEX,this.getBackground());
-    }
 
     @Override
     public int getPanelIndex() {

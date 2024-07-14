@@ -33,12 +33,13 @@ public class Window extends JFrame{
         this.setVisible(true);
     }
 
-    public void panelsChange(int number){
-        this.remove(0);
-        for(Panel panel : panels){
-            if(panel.getPanelIndex()==number)this.add(panels.get(panel.getPanelIndex()));
-        }
+    //ふかんぜん。いろかわったりかわらなかったり。画面サイズ買えたら色かわる。
+    public void panelsChange(int after){
+        this.remove(panels.get(panelIndex));
+
+        this.add(panels.get(after));
         
-        this.panelIndex = number;
+        this.panelIndex = after;
+        this.repaint();
     }
 }
