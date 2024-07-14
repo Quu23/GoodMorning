@@ -30,4 +30,8 @@ public class Window extends JFrame{
         this.add(panels.get(SidebarPanel.PANEL_INDEX),BorderLayout.WEST);
         this.setVisible(true);
     }
+
+    public void panelsChange(int number){
+        
+    }
 }
