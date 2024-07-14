@@ -9,16 +9,31 @@ public class SidebarPanel extends Panel{
     
     SidebarPanel(){
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        JButton fastWakeUp = new JButton();
+        JButton fastWakeUp = new JButton("早起き");
         fastWakeUp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                App.window.panelsChange(FastWakeUpPanel.PANEL_INDEX);
             }
         });
-        this.add(new JButton("早寝"));
-        this.add(new JButton("早起き"));
-        this.add(new JButton("朝ごはん"));
+        JButton fastGoSleep = new JButton("早寝");
+        fastGoSleep.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                App.window.panelsChange(FastGoSleepPanel.PANEL_INDEX);
+            }
+        });
+        JButton breakFast = new JButton("朝ごはん");
+        breakFast.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                App.window.panelsChange(BreakfastPanel.PANEL_INDEX);
+            }
+        });
+        this.add(fastWakeUp);
+        this.add(fastGoSleep);
+        this.add(breakFast);
+
         this.setBackground(Color.PINK);
     }
 

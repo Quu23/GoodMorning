@@ -7,5 +7,6 @@ public class App {
     
     public static void main(String[] args) throws Exception {
         window = new Window("kari");
+        System.out.println(window.getComponentCount());
     }
 }
